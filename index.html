@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Precios e Impuestos</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Calculadora de Precios e Impuestos</h1>
+    <input type="number" id="numero" placeholder="Ingresa un número" onkeypress="presionarTecla(event)">
+    
+    <button onclick="calcularDescuento()">Restar 7.39%</button>
+    <button onclick="calcularImpuesto('IEPS')">Sumar IEPS (34%)</button>
+    <button onclick="calcularImpuesto('IVA')">Sumar IVA (42%)</button>
+    <button onclick="calcularImpuesto('IVA_IEPS')">Sumar IVA y IEPS (50%)</button>
+    <button onclick="calcularImpuesto('LIBRE')">Sumar Libre de Impuestos (26%)</button>
+    
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <input type="number" id="cantidadPiezas" placeholder="Cantidad de piezas">
+    <button onclick="calcularPrecioPorUnidad()">Usar precio obtenido</button>
+    
+    <p>Precio por unidad: <span id="precioPorUnidad"></span></p>
+</body>
+</html>
